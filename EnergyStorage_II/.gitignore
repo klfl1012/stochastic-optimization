@@ -1,0 +1,8 @@
+*.csv
+*.pgf
+*.nc
+*.pkl
+*.png
+
+*.todo
+*old

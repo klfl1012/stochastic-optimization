@@ -1,0 +1,24 @@
+lstm-maf_old:
+  model_path: "/Users/florian/Documents/github/thesis/stochastic-optimization/EnergyStorage_II/StochasticModels/models/lstm_maf_forecast_1.pth"
+  c_scaler_path: "/Users/florian/Documents/github/thesis/stochastic-optimization/EnergyStorage_II/StochasticModels/models/lstm_maf_context_scaler.pkl"
+  x_scaler_path: "/Users/florian/Documents/github/thesis/stochastic-optimization/EnergyStorage_II/StochasticModels/models/lstm_maf_X_scaler.pkl"
+  parameters:
+    lstm_parameters:
+      input_size: 24
+      hidden_size: 256
+      num_layers: 1
+      output_size: 120
+      dropout: 0.0
+    maf_parameters:
+      x_dim: 120
+      c_dim: 120
+      num_flows: 2
+      weight_decay: 0.00001
+      temperature: 1.5
+      dropout_probability: 0.0
+      num_blocks: 0
+      hidden_features: 64
+      use_batch_norm: true
+      use_residual_blocks: false
+      lr: 0.001
+
