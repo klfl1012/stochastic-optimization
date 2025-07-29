@@ -1,4 +1,5 @@
 from Models.EnergyStoragePolicy import EnergyStoragePolicy
+from Models.EnergyStorageModel import EnergyStorageModel
 import numpy as np
 import pulp
 from pulp import LpMaximize, LpProblem, LpVariable, lpSum
@@ -13,7 +14,7 @@ class DeterministicLookahead(EnergyStoragePolicy):
     :horizon: int - Anzahl der Tage, die vorausgeschaut werden (Lookahead-Horizont).
     :verbose: bool - Ob die stündlichen Entscheidungen ausgegeben werden sollen (default: False).
     """
-    def __init__(self, model: EnergyStoragePolicy, policy_name: str, horizon: int, verbose: bool=False):
+    def __init__(self, model: EnergyStorageModel, policy_name: str, horizon: int, verbose: bool=False):
         super().__init__(model, policy_name)
         assert horizon > 0 and isinstance(horizon, int), "Lookahead horizon muss eine positive ganze Zahl sein."
         self.horizon = horizon
